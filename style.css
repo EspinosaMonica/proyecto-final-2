@@ -1,24 +1,30 @@
 /* Encabezado de página */
 .nav {
     display: flex;
-    justify-content: flex-start; 
-    gap: 15px; 	
+    justify-content: flex-start;
+    gap: 15px;
 }
 
 .nav a {
-    text-decoration: none; 
-    color: #8a9597; 
-    font-weight: bold; 
+    text-decoration: none;
+    color: #8a9597;
+    font-weight: bold;
 }
 
 .nav a:hover {
-    color: #000000; 
+    color: #000000;
 }
 
 .container-1 {
     display: flex;
     flex-direction: column;
     height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #f1d7ff;
 }
 
 .container-1 img {
@@ -42,6 +48,10 @@
     margin: 0 auto;
 }
 
+.container-2A {
+    margin-top: 150px;
+}
+
 .container-2C img {
     max-width: 320px;
     height: auto;
@@ -54,38 +64,39 @@
     margin-right: 40px;
     margin-left: 40px;
     display: flex;
-    align-items: center; 
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
 }
 
 .blue-button {
-    background-color: #001f3f; 
-    color: #ffffff; 
-    border: none; 
-    border-radius: 8px; 
-    padding: 10px 20px; 
-    font-size: 16px; 
-    font-family: Arial, sans-serif; 
-    cursor: pointer; 
+    background-color: #001f3f;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
     display: flex;
-    justify-content: flex-start; 
-    align-items: center; 
-    gap: 10px; 
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
     position: relative;
     margin-left: 40px;
 }
 
 .blue-button::after {
-    content: ''; 
+    content: '';
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px; 
-    height: 20px; 
-    background-image: url('https://static.vecteezy.com/system/resources/previews/026/704/050/non_2x/arrow-indicates-the-direction-icon-replaceable-design-vector.jpg'); 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    border-radius: 4px; 
+    width: 30px;
+    height: 20px;
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/000/379/577/small/Basic_Elements__28114_29.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    border-radius: 4px;
 }
 
 .rectangle {
@@ -107,6 +118,10 @@
         height: 60%;
         margin-top: 15px;
     }
+
+    .container-2C img {
+        margin-top: 50px;
+    }
 }
 
 /* Contenido de la página de 768px a infinito */
@@ -117,12 +132,12 @@
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
-        align-items: center; 
+        align-items: center;
     }
 
     .container-1 img {
-        width: 150px; 
-        height: auto; 
+        width: 150px;
+        height: auto;
         margin-left: 20px;
     }
 
@@ -130,13 +145,14 @@
         max-width: 270px;
         height: auto;
         border-radius: 15px;
+        margin-top: -20px;
     }
 
     .horizontal-list {
-        list-style-type: none; 
-        padding: 0; 
-        margin: 0; 
-        display: flex; 
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
         color: #808080;
         margin-top: 15px;
     }
@@ -146,8 +162,8 @@
     }
 
     .large-item {
-        font-size: 24px; 
-        font-weight: bold; 
+        font-size: 24px;
+        font-weight: bold;
         color: #000000;
     }
 
@@ -160,8 +176,8 @@
     .container-2A {
         display: flex;
         flex-direction: column;
-        align-items: center; 
-        justify-content: center; 
+        align-items: center;
+        justify-content: center;
         margin-top: -195px;
         gap: 10px;
         margin-right: 40px;
@@ -169,7 +185,7 @@
     }
 
     .rectangle {
-        background-color: #604Aff; 
+        background-color: #604Aff;
         width: 380px;
         height: 150px;
         display: flex;
@@ -177,9 +193,26 @@
         border-radius: 15px;
     }
 
-		.rectangle h3 {
-			color: #ffffff; 
-		}
+    .rectangle h3 {
+        color: #ffffff;
+    }
+}
+
+/* Pie de página */
+.footer {
+    background-color: #5c5c5c;
+    color: #000000;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    margin-top: 200px;
+    width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 
